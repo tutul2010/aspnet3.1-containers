@@ -1,0 +1,20 @@
+version: "3"
+services:
+    web:
+        build: .
+        ports:
+            - "8080:80"
+       # environment: 
+        #    - ASPNETCORE_ENVIRONMENT=Development
+        depends_on:
+            - db
+    db:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "Marine7815@@"
+            ACCEPT_EULA: "Y"
+            MSSQL_DB: "PetsDB"
+           # MSSQL_USER: "bookappdb_app"
+            MSSQL_PASSWORD: "Marine7815@@"
+        ports: 
+            - "1432:1433"
