@@ -25,15 +25,17 @@ namespace mvcapp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
-                services.AddDbContext<MyDatabaseContext>(options =>
-                   options.UseSqlServer(Configuration.GetConnectionString("connection")));
-            else
-                 services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlite("Data Source=localdatabase.db"));
-               
+            if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development"){
+                var connection = Configuration.GetConnectionString("DbConnection");
+            services.AddDbContext<PetsContext>(options =>
+                options.UseSqlServer(connection));
+            }
             
+            else
+            {
+                services.AddDbContext<PetsContext>(options =>
+                options.UseSqllite("Data Source=localdatabase.db"));
+            }  
             services.AddControllersWithViews();
         }
 
