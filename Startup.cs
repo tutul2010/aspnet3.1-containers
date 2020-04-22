@@ -26,10 +26,14 @@ namespace mvcapp
         public void ConfigureServices(IServiceCollection services)
         {
 
-            var connection = Configuration.GetConnectionString("connection");
-            services.AddDbContext<PetsContext>(options =>
-                options.UseSqlServer(connection));
-                
+            if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+                services.AddDbContext<MyDatabaseContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("connection")));
+            else
+                 services.AddDbContext<MyDatabaseContext>(options =>
+                    options.UseSqlite("Data Source=localdatabase.db"));
+               
+            
             services.AddControllersWithViews();
         }
 
