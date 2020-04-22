@@ -31,11 +31,7 @@ namespace mvcapp
                 options.UseSqlServer(connection));
             }
             
-            else
-            {
-                services.AddDbContext<PetsContext>(options =>
-                options.UseSqllite("Data Source=localdatabase.db"));
-            }  
+           
             services.AddControllersWithViews();
         }
 
