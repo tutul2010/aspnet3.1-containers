@@ -1,20 +1,22 @@
 version: "3"
 services:
+
+    sql2017:
+      image: burk1212/sql
+      container_name: sql
+      build: 
+        context: ./sqldb
+        dockerfile: Dockerfile
+      ports:
+        - "1433:1433"
+      tty: true
+        
+      depends_on:
+        - web
+            
     web:
-        build: .
-        ports:
-            - "8080:80"
-        environment: 
-            - ASPNETCORE_ENVIRONMENT=Development
-        depends_on:
-            - db
-    db:
-        image: "mcr.microsoft.com/mssql/server:2017-latest"
-        environment:
-            SA_PASSWORD: "Marine7815@@"
-            ACCEPT_EULA: "Y"
-           # MSSQL_DB: "PetsDB"
-           # MSSQL_USER: "bookappdb_app"
-           # MSSQL_PASSWORD: "Marine7815@@"
-        ports: 
-            - "1433:1433"
+      build: .
+      ports:
+        - "8080:80"
+      environment: 
+        - ASPNETCORE_ENVIRONMENT=Development
