@@ -4,17 +4,17 @@ services:
         build: .
         ports:
             - "8080:80"
-       # environment: 
-        #    - ASPNETCORE_ENVIRONMENT=Development
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Development
         depends_on:
             - db
     db:
-        image: "mcr.microsoft.com/mssql/server"
+        image: "mcr.microsoft.com/mssql/server:2017-latest"
         environment:
             SA_PASSWORD: "Marine7815@@"
             ACCEPT_EULA: "Y"
-            MSSQL_DB: "PetsDB"
+           # MSSQL_DB: "PetsDB"
            # MSSQL_USER: "bookappdb_app"
-            MSSQL_PASSWORD: "Marine7815@@"
+           # MSSQL_PASSWORD: "Marine7815@@"
         ports: 
-            - "1432:1433"
+            - "1433:1433"

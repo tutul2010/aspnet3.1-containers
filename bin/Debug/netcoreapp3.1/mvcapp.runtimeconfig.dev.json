@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/fasocloud/.dotnet/store/|arch|/|tfm|",
-      "/home/fasocloud/.nuget/packages",
+      "/home/roro/.dotnet/store/|arch|/|tfm|",
+      "/home/roro/.nuget/packages",
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ]
   }
