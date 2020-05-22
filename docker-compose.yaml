@@ -2,8 +2,7 @@ version: "3"
 services:
 
     sql2017:
-      image: burk1212/sql
-      container_name: sql
+      container_name: sql2017
       build: 
         context: ./sqldb
         dockerfile: Dockerfile
