@@ -1,7 +1,5 @@
 
 
+echo 'starting database';
 
-
-echo 'starting database'
-
-/opt/mssql/bin/sqlservr & ./setup-database.sh & bash
+./setup-database.sh & /opt/mssql/bin/sqlservr
