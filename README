@@ -12,3 +12,30 @@ And you want to run using docker use those image burk1212/petsappcore for the we
 
 docker run -d -p 1433:1433 burk1212/petsdbcore (run this first)
 docker run -d -p 8080:80 burk1212/petsappcore
+
+or create docker-compose file and add this content:
+version: "3"
+services:
+
+    sql2017:
+      image: burk1212/petsdbcore
+      container_name: sql2017
+      ports:
+        - "1433:1433"
+      tty: true
+
+      depends_on:
+        - web
+
+    web:
+      image: burk1212/petsappcore
+      container_name: webcore
+      ports:
+        - "8080:80"
+      environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+    
+    
+    
+  Save the file and run: docker-compose up -d
+  Check for logs: docker-compose logs and to View container: docker-compose ps
