@@ -1,9 +1,9 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/home/fasocloud/.dotnet/store/|arch|/|tfm|",
-      "/home/fasocloud/.nuget/packages",
-      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Users\\koand\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\koand\\.nuget\\packages",
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ]
   }
 }

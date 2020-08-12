@@ -27,7 +27,7 @@ namespace mvcapp
         {
             if(Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development"){
                 var connection = Configuration.GetConnectionString("DbConnection");
-            services.AddDbContext<PetsContext>(options =>
+            services.AddDbContext<mvcappContext>(options =>
                 options.UseSqlServer(connection));
             }
             

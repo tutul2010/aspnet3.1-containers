@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mvcapp.Models;
 
-namespace mvcapp.Controllers
+namespace mvcapp
 {
     public class PetsController : Controller
     {
-        private readonly PetsContext _context;
+        private readonly mvcappContext _context;
 
-        public PetsController(PetsContext context)
+        public PetsController(mvcappContext context)
         {
             _context = context;
         }
@@ -21,8 +21,8 @@ namespace mvcapp.Controllers
         // GET: Pets
         public async Task<IActionResult> Index()
         {
-            var petsContext = _context.Pets.Include(p => p.Owner);
-            return View(await petsContext.ToListAsync());
+            var mvcappContext = _context.Pets.Include(p => p.Owner);
+            return View(await mvcappContext.ToListAsync());
         }
 
         // GET: Pets/Details/5
@@ -56,7 +56,7 @@ namespace mvcapp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("PetId,Name,OwnerId")] Pet pet)
+        public async Task<IActionResult> Create([Bind("PetId,Name,OwnerId,Age,Picture")] Pet pet)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace mvcapp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("PetId,Name,OwnerId")] Pet pet)
+        public async Task<IActionResult> Edit(int id, [Bind("PetId,Name,OwnerId,Age,Picture")] Pet pet)
         {
             if (id != pet.PetId)
             {

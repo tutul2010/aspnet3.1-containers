@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mvcapp", "mvcapp.csproj", "{06C192B2-9989-47B6-AB3A-A96A60EC76FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetsStore", "..\PetsStore\PetsStore.csproj", "{FD83A0D9-A461-45C6-A367-18355055A16B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06C192B2-9989-47B6-AB3A-A96A60EC76FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06C192B2-9989-47B6-AB3A-A96A60EC76FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06C192B2-9989-47B6-AB3A-A96A60EC76FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06C192B2-9989-47B6-AB3A-A96A60EC76FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD83A0D9-A461-45C6-A367-18355055A16B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD83A0D9-A461-45C6-A367-18355055A16B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD83A0D9-A461-45C6-A367-18355055A16B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD83A0D9-A461-45C6-A367-18355055A16B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24FAAB5A-DB33-4279-9E0E-609EB3DDEB3A}
+	EndGlobalSection
+EndGlobal

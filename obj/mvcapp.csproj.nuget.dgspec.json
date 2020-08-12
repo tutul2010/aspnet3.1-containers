@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/fasocloud/Netcore/aspnet3.1-containers/mvcapp.csproj": {}
+    "C:\\azureDocs\\aspnet3.1-containers\\mvcapp.csproj": {}
   },
   "projects": {
-    "/home/fasocloud/Netcore/aspnet3.1-containers/mvcapp.csproj": {
+    "C:\\azureDocs\\aspnet3.1-containers\\mvcapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/fasocloud/Netcore/aspnet3.1-containers/mvcapp.csproj",
+        "projectUniqueName": "C:\\azureDocs\\aspnet3.1-containers\\mvcapp.csproj",
         "projectName": "mvcapp",
-        "projectPath": "/home/fasocloud/Netcore/aspnet3.1-containers/mvcapp.csproj",
-        "packagesPath": "/home/fasocloud/.nuget/packages/",
-        "outputPath": "/home/fasocloud/Netcore/aspnet3.1-containers/obj/",
+        "projectPath": "C:\\azureDocs\\aspnet3.1-containers\\mvcapp.csproj",
+        "packagesPath": "C:\\Users\\koand\\.nuget\\packages\\",
+        "outputPath": "C:\\azureDocs\\aspnet3.1-containers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/fasocloud/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\koand\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +51,10 @@
               "target": "Package",
               "version": "[3.1.3, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -61,7 +67,7 @@
             },
             "Microsoft.VisualStudio.Web.codeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             }
           },
           "imports": [
@@ -82,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.201/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

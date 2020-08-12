@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,13 +7,13 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using mvcapp.Models;
 
-namespace mvcapp.Controllers
+namespace mvcapp
 {
     public class OwnersController : Controller
     {
-        private readonly PetsContext _context;
+        private readonly mvcappContext _context;
 
-        public OwnersController(PetsContext context)
+        public OwnersController(mvcappContext context)
         {
             _context = context;
         }
@@ -53,7 +53,7 @@ namespace mvcapp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("OwnerId,FirstName,LastName,email")] Owner owner)
+        public async Task<IActionResult> Create([Bind("OwnerId,FirstName,LastName,email,Photo,PhoneNumber")] Owner owner)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace mvcapp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("OwnerId,FirstName,LastName,email")] Owner owner)
+        public async Task<IActionResult> Edit(int id, [Bind("OwnerId,FirstName,LastName,email,Photo,PhoneNumber")] Owner owner)
         {
             if (id != owner.OwnerId)
             {

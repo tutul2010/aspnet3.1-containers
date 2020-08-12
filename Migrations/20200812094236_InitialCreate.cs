@@ -14,7 +14,9 @@ namespace mvcapp.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    email = table.Column<string>(nullable: true)
+                    email = table.Column<string>(nullable: true),
+                    Photo = table.Column<string>(nullable: true),
+                    PhoneNumber = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -28,7 +30,9 @@ namespace mvcapp.Migrations
                     PetId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
-                    OwnerId = table.Column<int>(nullable: false)
+                    OwnerId = table.Column<int>(nullable: false),
+                    Age = table.Column<int>(nullable: false),
+                    Picture = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

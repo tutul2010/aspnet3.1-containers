@@ -1,4 +1,4 @@
-@model IEnumerable<mvcapp.Models.Owner>
+﻿@model IEnumerable<mvcapp.Models.Owner>
 
 @{
     ViewData["Title"] = "Index";
@@ -21,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.email)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Photo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +41,12 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Photo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.OwnerId">Edit</a> |
