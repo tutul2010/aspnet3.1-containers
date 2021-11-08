@@ -32,25 +32,8 @@ stages:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)'
           ArtifactName: 'drop'
           publishLocation: 'Container'
+          
 
 
 
-- stage: Deploy
-  jobs:
-    - job: 
-      pool: 
-        vmImage: 'vs2017-win2016'
-      steps:
-        - task: DownloadBuildArtifacts@0
-          inputs:
-            buildType: 'current'
-            downloadType: 'single'
-            artifactName: 'drop'
-            downloadPath: '$(Build.ArtifactStagingDirectory)'
-        - task: AzureRmWebAppDeployment@4
-          inputs:
-            ConnectionType: 'AzureRM'
-            azureSubscription: 'Pay-As-You-Go-Valid'
-            appType: 'webApp'
-            WebAppName: 'fasowebapp'
-            packageForLinux: '$(System.ArtifactsDirectory)/**/*.zip'
+
